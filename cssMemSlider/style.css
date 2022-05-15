@@ -83,6 +83,11 @@ body {
 	border: 0.2em solid #ffffff;
 }
 
+.ctrl:active {
+	border-bottom: 0.2em dashed #c25252;
+	box-sizing: border-box;
+}
+
 .ctrl:hover .sp {
 	background-color: #c25252;
 	border-color: #c25252;
@@ -170,5 +175,12 @@ input[type="radio"] {
 	}
 	.words {
 		width: 100%;
+	}
+	.labels {
+		height: 2.5em;
+	}
+	.controller {
+		height: 2.5em;
+		align-items: center;
 	}
 }
