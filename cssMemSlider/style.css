@@ -143,3 +143,27 @@ input[type="radio"] {
 #radio-4:checked ~ .control .controller .labels .ctrl .sp4 {
 	background-color: transparent;
 }
+
+@media (max-width: 568px) {
+	.paragraph {
+		text-align: center;
+	}
+	.wrapper {
+		padding: 5%;
+	}
+	.slider {
+		height: 50vh;
+	}
+	.control {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.controller {
+		height: 2em;
+	}
+	.sp {
+		width: 1.2em;
+		height: 1.2em;
+		border-radius: 50%;
+	}
+}
