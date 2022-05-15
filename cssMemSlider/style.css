@@ -152,7 +152,7 @@ input[type="radio"] {
 		padding: 5%;
 	}
 	.slider {
-		height: 50vh;
+		max-height: 20em;
 	}
 	.control {
 		flex-direction: column-reverse;
@@ -160,10 +160,14 @@ input[type="radio"] {
 	}
 	.controller {
 		height: 2em;
+		width: 80%;
 	}
 	.sp {
 		width: 1.2em;
 		height: 1.2em;
 		border-radius: 50%;
+	}
+	.words {
+		width: 100%;
 	}
 }
