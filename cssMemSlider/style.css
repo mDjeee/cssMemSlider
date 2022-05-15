@@ -1,3 +1,145 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+body {
+	background-color: #34495e;
+	padding: 1%;
+	overflow: hidden;
+}
+
 .wrapper {
-  width: 90%;
+	max-width: 45em;
+	gap: 1em;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.slider {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+}
+
+.img {
+	width: 0;
+	object-fit: contain;
+	transition: all 0.5s;
+}
+
+.words {
+	display: flex;
+	overflow: hidden;
+}
+
+.paragraph {
+	width: 0;
+	height: 1.2em;
+	font-size: 1.2em;
+	line-height: 2em;
+	visibility: hidden;
+	transition: width 0.5s ease-out;
+}
+
+.control {
+	display: flex;
+	justify-content: space-between;
+}
+
+.labels {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.ctrl {
+	display: block;
+	width: 20%;
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.controller {
+	width: 23%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.sp {
+	content: "";
+	display: block;
+	height: 40%;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: 0.2em solid #ffffff;
+}
+
+.ctrl:hover .sp {
+	background-color: #c25252;
+	border-color: #c25252;
+}
+
+#radio-1:checked ~ .slider .first {
+	width: 100%;
+}
+
+#radio-2:checked ~ .slider .second {
+	width: 100%;
+}
+
+#radio-3:checked ~ .slider .third {
+	width: 100%;
+}
+
+#radio-4:checked ~ .slider .fourth {
+	width: 100%;
+}
+
+
+#radio-1:checked ~ .control .words .one {
+	width: 100%;
+	visibility: visible;
+}
+
+#radio-2:checked ~ .control .words .two {
+	width: 100%;
+	visibility: visible;
+}
+
+#radio-3:checked ~ .control .words .three {
+	width: 100%;
+	visibility: visible;
+}
+
+#radio-4:checked ~ .control .words .four {
+	width: 100%;
+	visibility: visible;
+}
+
+input[type="radio"] {
+	visibility: hidden;
+}
+
+#radio-1:checked ~ .control .controller .labels .ctrl .sp1 {
+	background-color: transparent;
+}
+
+#radio-2:checked ~ .control .controller .labels .ctrl .sp2 {
+	background-color: transparent;
+}
+
+#radio-3:checked ~ .control .controller .labels .ctrl .sp3 {
+	background-color: transparent;
+}
+
+#radio-4:checked ~ .control .controller .labels .ctrl .sp4 {
+	background-color: transparent;
 }
