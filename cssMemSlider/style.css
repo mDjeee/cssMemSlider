@@ -22,7 +22,7 @@ body {
 	height: 80vh;
 	display: flex;
 	justify-content: center;
-	border: 1px solid #fff
+	border: 0.1em solid #fff
 }
 
 .img {
