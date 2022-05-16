@@ -6,7 +6,7 @@ html,body {
 
 body {
 	background-color: #34495e;
-	padding: 1%;
+	padding: 2%;
 	overflow: hidden;
 }
 
@@ -22,11 +22,12 @@ body {
 	height: 80vh;
 	display: flex;
 	justify-content: center;
+	border: 1px solid #fff
 }
 
 .img {
 	width: 0;
-	object-fit: fill;
+	object-fit: contain;
 	transition: all 0.5s;
 }
 
@@ -67,7 +68,7 @@ body {
 }
 
 .controller {
-	width: 23%;
+	width: 30%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -84,7 +85,7 @@ body {
 }
 
 .ctrl:active {
-	border-bottom: 0.2em dashed #c25252;
+	border-bottom: 0.2em solid #c25252;
 	box-sizing: border-box;
 }
 
@@ -150,9 +151,10 @@ input[type="radio"] {
 	background-color: transparent;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 600px) {
 	.paragraph {
-		text-align: center;
+		text-align: left;
+		font-size: 1em;
 	}
 	.wrapper {
 		padding: 5%;
