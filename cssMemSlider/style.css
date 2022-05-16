@@ -1,0 +1,188 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+body {
+	background-color: #34495e;
+	padding: 2%;
+	overflow: hidden;
+}
+
+.wrapper {
+	max-width: 45em;
+	gap: 1em;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.slider {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	border: 0.1em solid #fff
+}
+
+.img {
+	width: 0;
+	object-fit: contain;
+	transition: all 0.5s;
+}
+
+.words {
+  width: 50%;
+	display: flex;
+	overflow: hidden;
+}
+
+.paragraph {
+	width: 0;
+	height: 1.2em;
+	font-size: 1.2em;
+	line-height: 2em;
+	visibility: hidden;
+	transition: width 0.5s ease-out;
+}
+
+.control {
+	display: flex;
+	justify-content: space-between;
+}
+
+.labels {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.ctrl {
+	display: block;
+	width: 20%;
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.controller {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.sp {
+	content: "";
+	display: block;
+	height: 40%;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: 0.2em solid #ffffff;
+}
+
+.ctrl:active {
+	border-bottom: 0.2em solid #c25252;
+	box-sizing: border-box;
+}
+
+.ctrl:hover .sp {
+	background-color: #c25252;
+	border-color: #c25252;
+}
+
+#radio-1:checked ~ .slider .first {
+	width: 100%;
+}
+
+#radio-2:checked ~ .slider .second {
+	width: 100%;
+}
+
+#radio-3:checked ~ .slider .third {
+	width: 100%;
+}
+
+#radio-4:checked ~ .slider .fourth {
+	width: 100%;
+}
+
+
+#radio-1:checked ~ .control .words .one {
+	width: 100%;
+	visibility: visible;
+}
+
+#radio-2:checked ~ .control .words .two {
+	width: 100%;
+	visibility: visible;
+}
+
+#radio-3:checked ~ .control .words .three {
+	width: 100%;
+	visibility: visible;
+}
+
+#radio-4:checked ~ .control .words .four {
+	width: 100%;
+	visibility: visible;
+}
+
+input[type="radio"] {
+	visibility: hidden;
+}
+
+#radio-1:checked ~ .control .controller .labels .ctrl .sp1 {
+	background-color: transparent;
+}
+
+#radio-2:checked ~ .control .controller .labels .ctrl .sp2 {
+	background-color: transparent;
+}
+
+#radio-3:checked ~ .control .controller .labels .ctrl .sp3 {
+	background-color: transparent;
+}
+
+#radio-4:checked ~ .control .controller .labels .ctrl .sp4 {
+	background-color: transparent;
+}
+
+@media (max-width: 600px) {
+	.paragraph {
+		text-align: left;
+		font-size: 1em;
+	}
+	.wrapper {
+		padding: 5%;
+	}
+	.slider {
+		max-height: 20em;
+	}
+	.control {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.controller {
+		height: 2em;
+		width: 80%;
+	}
+	.sp {
+		width: 1.2em;
+		height: 1.2em;
+		border-radius: 50%;
+	}
+	.words {
+		width: 100%;
+	}
+	.labels {
+		height: 2.5em;
+	}
+	.controller {
+		height: 2.5em;
+		align-items: center;
+	}
+}
